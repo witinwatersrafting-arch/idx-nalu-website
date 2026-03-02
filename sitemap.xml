@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://uganda-rafting.com/</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://uganda-rafting.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://uganda-rafting.com/" />
   </url>
-  </urlset>
+
+  <url>
+    <loc>https://uganda-rafting.com/zh/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uganda-rafting.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://uganda-rafting.com/zh/" />
+  </url>
+
+  <url>
+    <loc>https://uganda-rafting.com/blog/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://uganda-rafting.com/blog/jinja-rafting-price-trap</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://uganda-rafting.com/blog/kampala-jinja-matatu-guide</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://uganda-rafting.com/blog/nile-rafting-safety-rules</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
