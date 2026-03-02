@@ -1,0 +1,6 @@
+User-agent: \*
+Allow: /
+
+# 把這行換成你真正的 Sitemap 網址
+
+Sitemap: https://uganda-rafting.com/sitemap.xml
