@@ -1023,10 +1023,15 @@
         function updateOnScroll() {
           const scrolled = window.scrollY;
           const windowHeight = window.innerHeight;
+          const isMobile = window.innerWidth < 768;
 
           parallaxContainers.forEach((container) => {
             const bg = container.querySelector(".parallax-bg");
             if (!bg) return;
+            if (isMobile) {
+              bg.style.transform = "translate3d(0, 0, 0)";
+              return;
+            }
             const rect = container.getBoundingClientRect();
             const elementTop = rect.top + scrolled;
 
