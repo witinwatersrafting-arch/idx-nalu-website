@@ -111,9 +111,8 @@
       <a href="/zh/#book" class="mobile-link bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-block">立即預訂</a>
     </nav>
 
-    <section id="blog-post" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-10 font-sans overflow-hidden parallax-container" data-parallax-speed="0.42">
-      <div class="parallax-bg absolute left-[-2%] w-[104%] h-[145%] -top-[22%] bg-cover bg-center -z-20 will-change-transform" style="background-image: url(&quot;/images/noodin-oversized-spraskirt.webp&quot;)"></div>
-      <div class="absolute inset-0 bg-black/15 -z-10"></div>
+    <section id="blog-post" class="relative py-16 md:py-20 lg:py-24 px-4 md:px-6 lg:px-10 font-sans overflow-hidden bg-[url('/images/noodin-oversized-spraskirt.webp')] bg-fixed bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
       <article class="relative z-10 max-w-3xl mx-auto bg-white/75 backdrop-blur-sm p-5 sm:p-8 lg:p-14 rounded-2xl shadow-xl border border-white/70">
         <div class="flex items-center gap-3 mb-6">
           <span class="bg-amber-100 text-amber-900 text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded">避坑指南</span>
@@ -179,32 +178,11 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 視差滾動腳本
-        const parallaxContainers = document.querySelectorAll(".parallax-container");
         const backToTopBtn = document.getElementById("backToTop");
         let ticking = false;
 
         function updateOnScroll() {
           const scrolled = window.scrollY;
-          const windowHeight = window.innerHeight;
-          const isMobile = window.innerWidth < 768;
-
-          parallaxContainers.forEach((container) => {
-            const bg = container.querySelector(".parallax-bg");
-            if (!bg) return;
-            if (isMobile) {
-              bg.style.transform = "translate3d(0, 0, 0)";
-              return;
-            }
-            const rect = container.getBoundingClientRect();
-            const elementTop = rect.top + scrolled;
-
-            if (scrolled + windowHeight > elementTop && scrolled < elementTop + container.offsetHeight) {
-              const speed = Number(container.dataset.parallaxSpeed || 0.2);
-              const yPos = (scrolled - elementTop) * speed;
-              bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
-            }
-          });
 
           if (backToTopBtn) {
             if (scrolled > 500) {

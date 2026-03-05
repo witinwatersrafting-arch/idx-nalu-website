@@ -159,9 +159,6 @@
       body {
         background-color: #000;
       }
-      .parallax-container {
-        min-height: 100vh;
-      }
     </style>
     <header class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center text-white bg-black/50 backdrop-blur-md transition-all">
       <a href="#" class="text-2xl font-serif font-bold text-white tracking-widest uppercase hover:text-[#f3ff00] transition-colors z-50"> Witin Waters </a>
@@ -200,12 +197,8 @@
       <a href="#book" class="mobile-link bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-block">Book Now</a>
     </nav>
 
-    <section class="relative h-screen flex flex-col items-center justify-center overflow-hidden parallax-container">
-      <picture class="contents">
-        <source media="(max-width: 640px)" srcset="images/witin-raft-into-bogugo-bow-high-hero-800.webp" />
-        <img src="images/witin-raft-into-bogugo-bow-high-hero.webp" alt="White Nile rafting hero background" class="parallax-bg absolute w-full h-[130%] -top-[15%] object-cover object-center -z-20 will-change-transform" fetchpriority="high" />
-      </picture>
-      <div class="absolute inset-0 bg-black/40 -z-10"></div>
+    <section class="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-[url('images/witin-raft-into-bogugo-bow-high-hero.webp')] bg-fixed bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
 
       <div class="relative z-10 text-center text-white px-4">
         <p class="text-xl lg:text-2xl font-light mb-4 tracking-widest uppercase">Welcome to</p>
@@ -442,10 +435,8 @@
       </div>
     </section>
 
-    <section id="whyus" class="relative py-32 px-6 flex flex-col items-center justify-center overflow-hidden parallax-container min-h-[400px]">
-      <div class="parallax-bg absolute w-full left-0 -z-20 bg-cover bg-top will-change-transform" style="background-image: url(&quot;images/witin-raft-drop-bowdown-hero.webp&quot;); height: calc(100% + 80vh); top: -50vh"></div>
-
-      <div class="absolute inset-0 bg-black/60 -z-10"></div>
+    <section id="whyus" class="relative py-20 md:py-24 lg:py-32 px-4 md:px-6 lg:px-10 flex flex-col items-center justify-center overflow-hidden min-h-[25rem] bg-[url('images/witin-raft-drop-bowdown-hero.webp')] bg-fixed bg-cover bg-top bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
 
       <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
         <h2 class="text-4xl lg:text-6xl font-serif font-bold mb-6">Why Witin Waters?</h2>
@@ -525,9 +516,8 @@
       </div>
     </section>
 
-    <section id="about" class="relative h-[60vh] flex flex-col justify-center overflow-hidden parallax-container">
-      <img src="images/witin-raft-splash-upside-down-hero.webp" alt="White Nile rafting splash background" class="parallax-bg absolute w-full h-[130%] -top-[15%] object-cover object-center -z-20 will-change-transform" loading="lazy" />
-      <div class="absolute inset-0 bg-black/50 -z-10"></div>
+    <section id="about" class="relative h-[60vh] flex flex-col justify-center overflow-hidden bg-[url('images/witin-raft-splash-upside-down-hero.webp')] bg-fixed bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
 
       <div class="relative z-10 text-right text-white px-6 lg:px-24 max-w-4xl ml-auto">
         <h2 class="text-2xl lg:text-5xl font-serif font-bold mb-3 lg:mb-6">Bujagali</h2>
@@ -580,9 +570,8 @@
         </div>
       </div>
     </section>
-    <section id="team" class="relative py-24 lg:py-32 flex flex-col justify-center overflow-hidden parallax-container">
-      <img src="images/witin-raft-vertical-splash-hero.webp" alt="Witin Waters team section background" class="parallax-bg absolute w-full h-[130%] -top-[15%] object-cover object-center -z-20 will-change-transform" loading="lazy" />
-      <div class="absolute inset-0 bg-black/60 -z-10"></div>
+    <section id="team" class="relative py-20 md:py-24 lg:py-32 flex flex-col justify-center overflow-hidden bg-[url('images/witin-raft-vertical-splash-hero.webp')] bg-fixed bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
 
       <div class="w-full max-w-[1600px] mx-auto px-6 lg:px-10 relative z-10">
         <div class="flex flex-col items-end text-right mb-16 text-white ml-auto max-w-2xl">
@@ -754,9 +743,8 @@
       </div>
     </section>
 
-    <section id="book" class="relative py-24 flex flex-col items-center justify-center overflow-hidden parallax-container min-h-screen">
-      <div class="parallax-bg absolute w-full h-[130%] -top-[15%] bg-cover bg-center -z-20 will-change-transform" style="background-image: url(&quot;images/witin-raft-bigwave-tension.webp&quot;)"></div>
-      <div class="absolute inset-0 bg-black/60 -z-10"></div>
+    <section id="book" class="relative py-20 md:py-24 flex flex-col items-center justify-center overflow-hidden min-h-screen bg-[url('images/witin-raft-bigwave-tension.webp')] bg-fixed bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/40">
+      <div class="hidden"></div>
 
       <div class="relative z-10 w-full max-w-xl mx-auto px-6">
         <div class="text-center text-white mb-10">
@@ -848,31 +836,11 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 視差滾動腳本
-        const parallaxContainers = document.querySelectorAll(".parallax-container");
         const backToTopBtn = document.getElementById("backToTop");
         let ticking = false;
 
         function updateOnScroll() {
           const scrolled = window.scrollY;
-          const windowHeight = window.innerHeight;
-          const isMobile = window.innerWidth < 768;
-
-          parallaxContainers.forEach((container) => {
-            const bg = container.querySelector(".parallax-bg");
-            if (!bg) return;
-            if (isMobile) {
-              bg.style.transform = "translate3d(0, 0, 0)";
-              return;
-            }
-            const rect = container.getBoundingClientRect();
-            const elementTop = rect.top + scrolled;
-
-            if (scrolled + windowHeight > elementTop && scrolled < elementTop + container.offsetHeight) {
-              const yPos = (scrolled - elementTop) * 0.2;
-              bg.style.transform = `translate3d(0, ${yPos}px, 0)`;
-            }
-          });
 
           if (backToTopBtn) {
             if (scrolled > 500) {
