@@ -8,31 +8,40 @@ idx-nalu-website/
 ├── robots.txt
 ├── sitemap.xml
 ├── .gitignore
-├── .idx/
-│   └── dev.nix                        # Development environment config
 ├── project-architecture.md            # This document
+├── wrangler.jsonc                     # Deployment config
+├── fiveserver.config.js               # Dev server config
 ├── images/                            # Static assets (WebP format)
-│   ├── witin-raft-into-bogugo-bow-high-hero.webp
 │   ├── witin-raft-*.webp
-│   ├── team-witin.webp
 │   ├── team-*.webp
 │   ├── tour-*.webp
-│   ├── why-*.webp
-│   ├── kampala-taxi-park1.webp
-│   └── uganda-kampala-street1.webp
+│   ├── community-*.webp
+│   └── why-*.webp
 ├── favicon.png
 ├── blog/
 │   ├── index.html                     # EN: Blog index
-│   ├── jinja-rafting-price-trap  # EN: Blog post - Jinja Rafting
-│   ├── kampala-jinja-matatu-guide # EN: Blog post - Kampala Matatu Guide
-│   └── nile-rafting-safety-rules  # EN: Blog post - Safety Rules
+│   ├── best-things-to-do-in-jinja.html
+│   ├── bujagali-challenge-2025.html
+│   ├── empowering-youth-on-the-nile.html
+│   ├── jinja-rafting-price-trap.html
+│   ├── kampala-jinja-matatu-guide.html
+│   ├── nile-rafting-safety-rules.html
+│   └── uganda-kayak-transport-2026.html
+├── faq/
+│   └── faq-en.html                    # EN: FAQ Page
 └── zh/                                # Chinese (zh-TW) locale root
     ├── index.html                     # ZH: Homepage
-    └── blog/
-        ├── index.html                 # ZH: Blog index
-        ├── jinja-rafting-price-trap   # ZH: Blog post - Jinja Rafting
-        ├── kampala-jinja-matatu-guide # ZH: Blog post - Kampala Matatu Guide
-        └── nile-rafting-safety-rules  # ZH: Blog post - Safety Rules
+    ├── blog/
+    │   ├── index.html                 # ZH: Blog index
+    │   ├── best-things-to-do-in-jinja.html
+    │   ├── bujagali-challenge-2025.html
+    │   ├── empowering-youth-on-the-nile.html
+    │   ├── jinja-rafting-price-trap.html
+    │   ├── kampala-jinja-matatu-guide.html
+    │   ├── nile-rafting-safety-rules.html
+    │   └── uganda-kayak-transport-2026.html
+    └── faq/
+        └── faq-zh.html                # ZH: FAQ Page
 ```
 
 ## 技術棧與配置
@@ -313,5 +322,5 @@ idx-nalu-website/
 
 ---
 
-**文檔版本：1.0**  
-**最後更新：2026年3月4日**
+**文檔版本：1.1**  
+**最後更新：2026年3月13日**
