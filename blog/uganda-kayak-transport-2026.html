@@ -79,41 +79,42 @@
   </head>
 
   <body id="top" class="font-sans text-gray-800 antialiased bg-white relative overflow-x-hidden">
-    <header class="fixed top-0 left-0 w-full z-50 px-4 py-4 sm:px-6 sm:py-6 flex justify-between items-center text-white bg-black/50 backdrop-blur-md transition-all">
-      <a href="/" class="text-xl sm:text-2xl font-serif font-bold text-white tracking-[0.12em] uppercase hover:text-[#f3ff00] transition-colors z-50"> Paddles on the Nile </a>
-      <nav class="hidden lg:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
-        <a href="/#trips" class="hover:opacity-70 transition-opacity">Trips</a>
-        <a href="/#whyus" class="hover:opacity-70 transition-opacity">Why Us</a>
-        <a href="/#about" class="hover:opacity-70 transition-opacity">About</a>
-        <a href="/#team" class="hover:opacity-70 transition-opacity">Team</a>
-        <a href="/#prep" class="hover:opacity-70 transition-opacity">Prep & FAQ</a>
-        <a href="/blog/" class="text-[#f3ff00] hover:opacity-70 transition-opacity">Blog</a>
+    <header class="fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-[1.5rem] flex justify-between items-center text-white bg-black/50 backdrop-blur-md transition-all">
+      <a href="/" class="flex items-center h-11 text-[clamp(1.25rem,4vw,1.5rem)] font-serif font-bold text-white tracking-[0.15em] uppercase hover:text-[#f3ff00] transition-colors z-50"> Paddles on the Nile </a>
+      <nav class="hidden lg:flex space-x-[2rem] text-[0.875rem] font-semibold uppercase tracking-[0.1em]">
+        <a href="/#trips" class="flex items-center h-11 hover:opacity-70 transition-opacity">Trips</a>
+        <a href="/#whyus" class="flex items-center h-11 hover:opacity-70 transition-opacity">Why Us</a>
+        <a href="/#about" class="flex items-center h-11 hover:opacity-70 transition-opacity">About</a>
+        <a href="/#team" class="flex items-center h-11 hover:opacity-70 transition-opacity">Team</a>
+        <a href="/faq/faq-en" class="flex items-center h-11 hover:opacity-70 transition-opacity">FAQ</a>
+        <a href="/blog/" class="flex items-center h-11 hover:opacity-70 transition-opacity">Blog</a>
       </nav>
 
-      <div class="flex items-center gap-2 sm:gap-3 mr-2 sm:mr-3 lg:mr-0">
-        <a href="/zh/blog/uganda-kayak-transport-2026" class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wide border border-white/60 hover:bg-white hover:text-black transition-colors whitespace-nowrap leading-none shrink-0" aria-label="Switch to Chinese">中文</a>
+      <div class="flex items-center gap-[0.75rem] mr-[0.75rem] lg:mr-0">
+        <a href="/zh/" class="flex items-center justify-center h-11 px-4 rounded-full text-[0.6875rem] font-bold uppercase tracking-wide border border-white/60 hover:bg-white hover:text-black transition-colors whitespace-nowrap shrink-0" aria-label="Switch language"> 中文 </a>
+
         <div class="hidden lg:block">
-          <a href="/#book" class="bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">Book Now</a>
+          <a href="/#book" class="flex items-center justify-center h-11 px-8 bg-white text-black rounded-full text-[0.75rem] font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"> Book Now </a>
         </div>
       </div>
 
-      <!-- Mobile Hamburger Menu Button -->
-      <button id="mobileMenuBtn" class="lg:hidden flex flex-col space-y-1.5 focus:outline-none ml-1.5 sm:ml-2">
+      <!-- 手機漢堡菜單按鈕 -->
+      <button id="mobileMenuBtn" class="lg:hidden flex flex-col space-y-1.5 focus:outline-none ml-2">
         <span class="w-6 h-0.5 bg-white transition-all"></span>
         <span class="w-6 h-0.5 bg-white transition-all"></span>
         <span class="w-6 h-0.5 bg-white transition-all"></span>
       </button>
     </header>
 
-    <!-- Mobile Navigation Menu -->
-    <nav id="mobileMenu" class="fixed top-24 left-0 w-full bg-black/95 backdrop-blur-md z-40 lg:hidden flex-col space-y-4 p-5 sm:p-6 text-white hidden">
-      <a href="/#trips" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Trips</a>
-      <a href="/#whyus" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Why Us</a>
-      <a href="/#about" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">About</a>
-      <a href="/#team" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Team</a>
-      <a href="/#prep" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Prep & FAQ</a>
-      <a href="/blog/" class="mobile-link text-sm font-semibold uppercase tracking-widest text-[#f3ff00] hover:opacity-70 transition-opacity block">Blog</a>
-      <a href="/#book" class="mobile-link bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-block">Book Now</a>
+    <!-- 手機版導航菜單 -->
+    <nav id="mobileMenu" class="fixed top-24 left-0 w-full bg-black/95 backdrop-blur-md z-40 lg:hidden flex-col space-y-4 p-6 text-white hidden">
+      <a href="https://uganda-rafting.com/#trips" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Trips</a>
+      <a href="https://uganda-rafting.com/#whyus" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Why Us</a>
+      <a href="https://uganda-rafting.com/#about" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">About</a>
+      <a href="https://uganda-rafting.com/#team" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Team</a>
+      <a href="https://uganda-rafting.com/faq/faq-en" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">FAQ</a>
+      <a href="https://uganda-rafting.com/blog/" class="mobile-link text-sm font-semibold uppercase tracking-widest hover:opacity-70 transition-opacity block">Blog</a>
+      <a href="https://uganda-rafting.com/#book" class="mobile-link bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-block">Book Now</a>
     </nav>
 
     <!-- Hero Section -->
