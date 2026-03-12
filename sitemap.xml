@@ -127,16 +127,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/blog/nile-rafting-safety-rules" />
   </url>
 
-    <url>
+  <url>
     <loc>https://uganda-rafting.com/zh/blog/uganda-kayak-transport-2026</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://uganda-rafting.com/blog/uganda-kayak-transport-2026" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://uganda-rafting.com/zh/blog/uganda-kayak-transport-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/blog/uganda-kayak-transport-2026" />
-
   </url>
-      <url>
+
+  <url>
     <loc>https://uganda-rafting.com/blog/uganda-kayak-transport-2026</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
@@ -145,8 +145,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/blog/uganda-kayak-transport-2026" />
   </url>
 
-    </url>
-      <url>
+  <url>
     <loc>https://uganda-rafting.com/faq/faq-en</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
@@ -155,8 +154,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/faq/faq-en" />
   </url>
 
-    </url>
-      <url>
+  <url>
     <loc>https://uganda-rafting.com/zh/faq/faq-zh</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
