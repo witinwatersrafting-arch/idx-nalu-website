@@ -42,7 +42,7 @@
 
 1. **讀取規範與樣板 (Context Loading)**：
    - 精確參考 (Targeted Reference)：
-     - 不要重新讀取整份 project-architecture.md，僅在需要確認 hreflang 格式時參考該文件。
+     - 不要重新讀取整份 project-architecture.md，僅在需要確認 hreflang 格式時參考 /vibe-standards/進階 SEO、Sitemap 與 Robots 規範.md。
      - 僅在需要編譯 HTML 時，讀取 /blog/bujagali-challenge-2025.html 作為唯一樣板。
      - 禁止在同一個對話中同時讀取 /blog/index.html 與 /zh/blog/index.html。請要求使用者分兩次對話處理，或先處理英文版。
 

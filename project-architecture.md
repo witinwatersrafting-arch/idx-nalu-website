@@ -103,22 +103,6 @@ idx-nalu-website/
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 ```
 
-## Hreflang 雙語系配置範例
-
-```html
-<!-- 英文版本 -->
-<link rel="canonical" href="https://uganda-rafting.com/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="en" href="https://uganda-rafting.com/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="zh-TW" href="https://uganda-rafting.com/zh/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/blog/jinja-rafting-price-trap" />
-
-<!-- 中文版本 -->
-<link rel="canonical" href="https://uganda-rafting.com/zh/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="en" href="https://uganda-rafting.com/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="zh-TW" href="https://uganda-rafting.com/zh/blog/jinja-rafting-price-trap" />
-<link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/blog/jinja-rafting-price-trap" />
-```
-
 ## Schema.org JSON-LD 範例 (BlogPosting)
 
 ```json
