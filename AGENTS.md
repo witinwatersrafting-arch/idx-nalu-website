@@ -41,9 +41,10 @@
 **觸發條件**：必須收到使用者回覆「確認」或「OK」後，才能啟動此階段。
 
 1. **讀取規範與樣板 (Context Loading)**：
-   - 靜默讀取根目錄的 `project-architecture.md`，特別是「5. 內容守護協議 - 嚴格逐字轉錄」。
-   - 靜默讀取 `vibe-standards/前端開發標準與佈局手冊.md` 與 `vibe-standards/進階 SEO、Sitemap 與 Robots 規範.md`。
-   - 靜默讀取 `/blog/bujagali-challenge-2025.html` 作為雙語網頁的 HTML 排版樣板。
+   - 精確參考 (Targeted Reference)：
+     - 不要重新讀取整份 project-architecture.md，僅在需要確認 hreflang 格式時參考該文件。
+     - 僅在需要編譯 HTML 時，讀取 /blog/bujagali-challenge-2025.html 作為唯一樣板。
+     - 禁止在同一個對話中同時讀取 /blog/index.html 與 /zh/blog/index.html。請要求使用者分兩次對話處理，或先處理英文版。
 
 2. **嚴格逐字轉錄 (Strict Verbatim) 與建檔**：
    - 在專案中建立兩個新實體檔案：`/blog/[英文slug].html` 與 `/zh/blog/[英文slug].html`。
@@ -73,3 +74,8 @@
 
 5. **零截斷原則 (Zero Truncation)**：
    直接在背景修改檔案並產生 Code Diff 供使用者 Accept。絕對禁止使用 `` 等省略符號，必須產出完整的 HTML 結構。
+
+6. **輸出協定 (Output Protocol) - 強制執行**：
+   - **Silent Mode (預設啟動)**：在編譯過程中，禁止在對話框中逐字輸出完整的 HTML 代碼塊。
+   - **Diff Only**：完成建檔或修改後，僅顯示檔案的 **diff (變動部分)** 或簡短的完成清單（例如：`✅ 已建立 /blog/new-post.html`）。
+   - **確認機制**：僅在遇到無法判斷的結構衝突時才中斷並提問，否則請一路編譯到底。
