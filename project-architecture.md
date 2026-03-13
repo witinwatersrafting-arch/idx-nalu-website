@@ -27,6 +27,7 @@ idx-nalu-website/
 │   ├── jinja-rafting-price-trap.html
 │   ├── kampala-jinja-matatu-guide.html
 │   ├── neighbor-herbal-tea.html
+│   ├── nile-perch-fishing-cave-tour.html
 │   ├── nile-rafting-safety-rules.html
 │   └── uganda-kayak-transport-2026.html
 ├── faq/
@@ -42,6 +43,7 @@ idx-nalu-website/
     │   ├── jinja-rafting-price-trap.html
     │   ├── kampala-jinja-matatu-guide.html
     │   ├── neighbor-herbal-tea.html
+    │   ├── nile-perch-fishing-cave-tour.html
     │   ├── nile-rafting-safety-rules.html
     │   └── uganda-kayak-transport-2026.html
     └── faq/
