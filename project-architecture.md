@@ -23,8 +23,10 @@ idx-nalu-website/
 │   ├── best-things-to-do-in-jinja.html
 │   ├── bujagali-challenge-2025.html
 │   ├── empowering-youth-on-the-nile.html
+│   ├── itanda-falls-grade-5-rapid.html
 │   ├── jinja-rafting-price-trap.html
 │   ├── kampala-jinja-matatu-guide.html
+│   ├── neighbor-herbal-tea.html
 │   ├── nile-rafting-safety-rules.html
 │   └── uganda-kayak-transport-2026.html
 ├── faq/
@@ -36,8 +38,10 @@ idx-nalu-website/
     │   ├── best-things-to-do-in-jinja.html
     │   ├── bujagali-challenge-2025.html
     │   ├── empowering-youth-on-the-nile.html
+    │   ├── itanda-falls-grade-5-rapid.html
     │   ├── jinja-rafting-price-trap.html
     │   ├── kampala-jinja-matatu-guide.html
+    │   ├── neighbor-herbal-tea.html
     │   ├── nile-rafting-safety-rules.html
     │   └── uganda-kayak-transport-2026.html
     └── faq/
@@ -272,10 +276,6 @@ idx-nalu-website/
 <!-- 視覺上看起來更大，但語意正確 -->
 ```
 
-@workspace 請讀取並更新 `#file project-architecture.md`。
-
-我們需要新增一項最高等級的開發準則，名為「內容守護協議 (Content Integrity Protocol)」。請在文檔的「開發規範 & 強制要求」章節中，新增以下內容：
-
 ---
 
 ### 5. 內容守護協議 - 嚴格逐字轉錄 (STRICT VERBATIM)
@@ -288,8 +288,6 @@ idx-nalu-website/
 4. **輸出檢查**：在提供代碼建議前，請自動比對原文與 HTML 內的文字，若發現任何單字差異，請立即修正回原文。
 
 ---
-
-## **嚴禁任何文字解釋、嚴禁省略程式碼。直接提供修改後的 `project-architecture.md` 內容。**
 
 ## 頁面範本檢查清單
 

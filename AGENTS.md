@@ -51,6 +51,6 @@
 4. **大廳卡片與 Sitemap 更新**：
    - 讀取 `/blog/index.html` 與 `/zh/blog/index.html`，套用 Tailwind 網格樣式，在文章列表最前方插入這篇新文章的入口卡片。
    - 讀取 `/sitemap.xml`，新增此文章的英、中雙語節點，並嵌入 Hreflang 屬性與 `0.8` 的優先權。
-
+   - 讀取 `/project-architecture.md`，更新專案目錄結構。
 5. **零截斷原則 (Zero Truncation)**：
    直接在背景修改檔案並產生 Code Diff 供使用者 Accept。絕對禁止使用 `` 等省略符號，必須產出完整的 HTML 結構。
