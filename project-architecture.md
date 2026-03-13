@@ -9,14 +9,25 @@ idx-nalu-website/
 ├── sitemap.xml
 ├── .gitignore
 ├── project-architecture.md            # This document
-├── wrangler.jsonc                     # Deployment config
+├── AGENTS.md                          # Project specific AI agents & workflows
+├── paddles-on-the-nile.cursorrules    # IDE/Cursor specific AI rules
+├── wrangler.jsonc                     # Deployment config (Cloudflare)
 ├── fiveserver.config.js               # Dev server config
 ├── images/                            # Static assets (WebP format)
 │   ├── witin-raft-*.webp
 │   ├── team-*.webp
 │   ├── tour-*.webp
 │   ├── community-*.webp
+│   ├── fish-*.webp
+│   ├── herbal-tea-*.webp
+│   ├── itanda-*.webp
 │   └── why-*.webp
+├── raw-images/                        # Original unprocessed image copies
+├── vibe-standards/                    # Development & Content Guidelines
+│   ├── 前端開發標準與佈局手冊...md
+│   ├── 影片與媒體效能優化規格...md
+│   ├── 後端串接與 GAS 踩雷指南...md
+│   └── 進階 SEO、Sitemap 與 Robots 規範.md
 ├── favicon.png
 ├── blog/
 │   ├── index.html                     # EN: Blog index
@@ -66,6 +77,7 @@ idx-nalu-website/
 | **Build Tools**             | None - Static HTML files served directly                   |
 | **Package Manager**         | None - No `package.json` or `node_modules`                 |
 | **Development Environment** | Nix (`.idx/dev.nix`)                                       |
+| **Clean URLs**              | Handle by Cloudflare (Strictly no `.html` in internal links) |
 
 ### Tailwind CSS 配置 (每個 HTML 文件中的 `<script>` 標籤)
 
@@ -177,23 +189,7 @@ idx-nalu-website/
 - 所有版本必須包含 `hreflang="x-default"`（指向英文版本）
 - 每個版本必須設置正確的 `rel="canonical"`
 
-範例（英文頁面）：
-
-```html
-<link rel="canonical" href="https://uganda-rafting.com/new-page" />
-<link rel="alternate" hreflang="en" href="https://uganda-rafting.com/new-page" />
-<link rel="alternate" hreflang="zh-TW" href="https://uganda-rafting.com/zh/new-page" />
-<link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/new-page" />
-```
-
-範例（中文頁面）：
-
-```html
-<link rel="canonical" href="https://uganda-rafting.com/zh/new-page" />
-<link rel="alternate" hreflang="en" href="https://uganda-rafting.com/new-page" />
-<link rel="alternate" hreflang="zh-TW" href="https://uganda-rafting.com/zh/new-page" />
-<link rel="alternate" hreflang="x-default" href="https://uganda-rafting.com/new-page" />
-```
+詳情參閱：`vibe-standards/進階 SEO、Sitemap 與 Robots 規範.md`
 
 ---
 
@@ -201,32 +197,7 @@ idx-nalu-website/
 
 **禁止使用絕對像素 (`px`) 進行尺寸設定。必須依賴 Tailwind CSS 的 `rem` 單位與斷點。**
 
-**正確做法：**
-
-```html
-<!-- 使用 Tailwind 的響應式斷點 -->
-<section class="px-4 sm:px-6 lg:px-10 py-20 sm:py-24">
-  <h1 class="text-2xl sm:text-3xl lg:text-4xl">Heading</h1>
-  <p class="text-[15px] sm:text-[16px] lg:text-[17px]">Paragraph</p>
-</section>
-```
-
-**禁止做法：**
-
-```html
-<!-- 絕對不允許使用內嵌 style 的 px 值 -->
-<section style="padding: 20px; padding-top: 50px;">
-  <h1 style="font-size: 32px;">Heading</h1>
-</section>
-```
-
-**Tailwind 斷點參考：**
-
-- 移動設備（預設）：< 640px
-- `sm:` ≥ 640px
-- `md:` ≥ 768px
-- `lg:` ≥ 1024px
-- `xl:` ≥ 1280px
+詳情參閱：`vibe-standards/前端開發標準與佈局手冊 (Frontend Vibe Standa.md`
 
 ---
 
@@ -234,49 +205,13 @@ idx-nalu-website/
 
 **嚴禁為了視覺樣式而破壞 H1~H6 的語意化階層結構。**
 
-**正確做法：**
+---
 
-```html
-<!-- 使用正確的語意化標籤 -->
-<article>
-  <h1>主要標題</h1>
-  <p>段落內容</p>
+### 4. 媒體與圖片優化規範
 
-  <section>
-    <h2>子標題</h2>
-    <p>段落內容</p>
+**所有圖片必須使用 WebP 格式，且寬度不應超過 1920px (除非特殊大圖)。**
 
-    <h3>更小的標題</h3>
-    <p>段落內容</p>
-  </section>
-</article>
-```
-
-**禁止做法：**
-
-```html
-<!-- 不允許為了視覺需求而使用錯誤的標題級別 -->
-<article>
-  <h2>主要標題</h2>
-  <!-- 錯誤：應該使用 h1 -->
-  <p>段落內容</p>
-
-  <h1>子標題</h1>
-  <!-- 錯誤：在 h2 後面使用 h1 -->
-</article>
-
-<!-- 不允許使用 div + class 來偽裝標題 -->
-<div class="text-4xl font-bold">標題</div>
-<!-- 錯誤：不是真正的標題語意 -->
-```
-
-**使用 Tailwind 進行視覺調整（而非更改標籤）：**
-
-```html
-<!-- 如果 h3  需要看起來像 h2，使用 Tailwind 的文字樣式類別 -->
-<h3 class="text-2xl font-bold">標題</h3>
-<!-- 視覺上看起來更大，但語意正確 -->
-```
+詳情參閱：`vibe-standards/影片與媒體效能優化規格 (Media Optimization S.md`
 
 ---
 
@@ -322,5 +257,5 @@ idx-nalu-website/
 
 ---
 
-**文檔版本：1.1**  
+**文檔版本：1.2**  
 **最後更新：2026年3月13日**
