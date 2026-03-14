@@ -1,13 +1,12 @@
-# 最高開發鐵則
+# Supreme Development Rules
 
-1. **佈局鐵律**：絕對禁用 px，強制使用行動優先 (Mobile-first) 與 Tailwind CSS 進行排版。
-2. **網址鐵律**：全站網址嚴禁包含 `.html`。內部連結強制使用「相對路徑 (如 `/blog/post`)」；外部資源與 `<head>` 內的 Meta/SEO/JSON-LD 標籤，強制使用「絕對路徑 (含 `https://`)」。
-3. **專案大腦與逐字轉錄**：本專案的根目錄架構、技術棧與最高準則（特別是「嚴格逐字轉錄協議」），請務必隨時參考根目錄的 `project-architecture.md`。
-4. **動態調用武器庫**：本專案有詳細的實作規範放在 `vibe-standards/` 資料夾中。當你執行特定任務時（例如：前端佈局、SEO 標籤、影片 Facade 模式或 GAS 串接），必須先讀取該資料夾下的對應文件，再進行代碼撰寫。
-5. **代碼修改與 Token 節流協議**：
-   - **禁止主動行為**：嚴禁主動啟動瀏覽器代理 (Browser Agent)、禁止進行任何視覺化 UI 測試或自動點擊。
-   - **禁止多輪修正**：若代碼執行報錯，請「僅回報錯誤訊息」並停止，嚴禁在未經授權下進行多輪自我嘗試修復。
-   - **一次性產出**：完成代碼撰寫/修改後，請立即停止所有動作，靜候手動驗證。
-
-6. **任務完成回報格式**：
-   - 任務結束後，請簡短列出：(1) 修改了哪些檔案 (2) 核心邏輯變動 (3) 提醒我手動檢查的視覺重點（如：Footer 位置）。
+1. **Layout Rule**: Strict prohibition on `px`. Force mobile-first approach and Tailwind CSS for all styling.
+2. **URL Rule**: Absolute prohibition on `.html` extensions site-wide. Internal links must use relative paths (e.g., `/blog/post`). External resources and `<head>` tags (Meta/SEO/JSON-LD/hreflang) must strictly use absolute paths (including `https://`).
+3. **Project Brain & Verbatim Protocol**: Always refer to `project-architecture.md` in the root directory for project structure, tech stack, and supreme guidelines (especially the "Strict Verbatim Protocol").
+4. **Dynamic Context Invocation**: Detailed implementation standards are in the `vibe-standards/` directory. Before executing specific tasks (e.g., frontend layout, SEO tags, video Facade pattern, or GAS integration), you MUST first read the corresponding document in this folder before writing code.
+5. **Code Modification & Token Throttling Protocol**:
+   - **Prohibit autonomous actions**: Do not initiate Browser Agent, perform visual UI tests, or execute auto-clicks.
+   - **Prohibit multi-round fixes**: If code execution errors occur, "only report the error message" and halt. Do NOT attempt multi-round self-repair without explicit authorization.
+   - **One-shot output**: Stop all actions immediately after writing/modifying code. Wait for manual verification.
+6. **Task Completion Report Format**:
+   - Upon task completion, briefly list: (1) Modified files (2) Core logic changes (3) Visual focal points requiring manual inspection (e.g., Footer position).
